@@ -39,10 +39,10 @@
 		 ];
 		 // And their, costume title
          $Static_Page_Titles = [
-			'Mysite.com - An Ethiopian Business Listing Directory',
+			'Mysite.com - A Business Listing Directory',
 			'Category | Search Companies By Their Categories ',
 			'Search | Find The Business You Are Looking For ',
-			'About | About ethio360.com & More.. ',
+			'About | About Mysite.com & More.. ',
 			'Register | Register Your Bussiness Fast & Free, Today! ',
 			'Contact | Any Questions?, Contact Mysite.com Today ',
 			'Login | Update Your Business Infromation, Read Your Messages & More',
