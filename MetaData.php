@@ -1,15 +1,12 @@
 <?php
 
- # Heps with URI's structed:
-  # page.php (single pages)
-	# page.php?action=foo (with action params)
-	# page.php?id=foo (with action params)
+ # Helps create dymanically-generated meta data for simple sites
  
  class MetaData{
-        protected $conn;
-        private $errors = [];
-        public  $PageMetaData;
-        public $SiteName = ' | Mysite.com';
+	protected $conn;
+	private $errors = [];
+	public  $PageMetaData;
+	public $SiteName = ' | Mysite.com';
 
 
      function __construct($conn){
@@ -24,8 +21,8 @@
       */
 
 	  // All static pages/URIs 
-	  function PageMetaData(){
-         $Allowed_Static_Pages = [
+	function PageMetaData(){
+		$Allowed_Static_Pages = [
 			'index.php', 
 			'category.php', 
 			'search.php', 
@@ -35,10 +32,9 @@
 			'page.php?q=login',
 			'page.php?q=LoggedIn',
 			'page.php?q=logout',
-			'page.php?q=update'
-		 ];
+		 ];	
 		 // And their, costume title
-         $Static_Page_Titles = [
+        	 $Static_Page_Titles = [
 			'Mysite.com - A Business Listing Directory',
 			'Category | Search Companies By Their Categories ',
 			'Search | Find The Business You Are Looking For ',
@@ -46,17 +42,17 @@
 			'Register | Register Your Bussiness Fast & Free, Today! ',
 			'Contact | Any Questions?, Contact Mysite.com Today ',
 			'Login | Update Your Business Infromation, Read Your Messages & More',
-			'Mysite.com - An Ethiopian Business Listing Directory',
-			'Mysite.com - An Ethiopian Business Listing Directory',
-			'Mysite.com - An Ethiopian Business Listing Directory',
-        ];
+			'Mysite.com - An US Business Listing Directory',
+			'Mysite.com - An US Business Listing Directory',
+			'Mysite.com - An US Business Listing Directory',
+      		  ];
 		// One tag, for the all above static pages
 		$Static_Page_Keywords = [
 			'keywords'=>'Mysite.com, Mysite.com business, Mysite.com business, company in Mysite.com, trade, export, Mysite.com'];
 		// One content description, for the above static pages
 		$Static_Page_Content = [
-			'content'=>'an country's business directory. | List your business Free!! and Find, 
-			country's based companies/businesses, Mysite.com'];
+			'content'=>'an country\'s business directory. | List your business Free!! and Find, 
+			country\'s based companies/businesses, Mysite.com'];
 			
          $Attach = [$Allowed_Static_Pages, $Static_Page_Titles, $Static_Page_Keywords, $Static_Page_Content];
          return $Attach;
