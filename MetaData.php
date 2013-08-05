@@ -42,11 +42,10 @@
       		  ];
 		// One tag, for the all above static pages
 		$Static_Page_Keywords = [
-			'keywords'=>'Mysite.com, Mysite.com business, Mysite.com business, company in Mysite.com, trade, export, Mysite.com'];
+			'keywords'=>'this, is, where, your, keywords, go, seperated, by, comma'];
 		// One content description, for the above static pages
 		$Static_Page_Content = [
-			'content'=>'an country\'s business directory. | List your business Free!! and Find, 
-			country\'s based companies/businesses, Mysite.com'];
+			'content'=>'This is where your "content" of your site goes'];
 			
          $Attach = [$Allowed_Static_Pages, $Static_Page_Titles, $Static_Page_Keywords, $Static_Page_Content];
          return $Attach;
@@ -83,13 +82,14 @@
      */
      function GetTitle($table, $id){
          
-		 try{  $stmt = $this->conn->prepare("SELECT * FROM $table WHERE id = ? ");
-               $stmt->execute(array($id));
-         }catch (PDOException $e){
-               return $this->errors = 'There seems to be a problem with your query, please try again';
-         }
-		 
-         if($stmt->rowCount() === 0){
+	try{  $stmt = $this->conn->prepare("SELECT * FROM $table WHERE id = ? ");
+              $stmt->execute(array($id));
+           }catch (PDOException $e){
+               return $this->errors = 'Unknown error!';
+           }
+		
+		
+        if($stmt->rowCount() === 0){
              return $this->errors = 'This page can not be found, please try another link later' ;
          }
 
