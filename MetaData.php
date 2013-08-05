@@ -1,13 +1,18 @@
 <?php
 
- # Helps create dymanically-generated meta data for simple sites
+ /*
+ 	This script is supposed to save a lot of headaches that comes with managing a meta data for 
+ 	slightly dynamic sites. By installing this file, and custme-editing few lines of configurations, you 
+ 	will be able to run a simple static / blog website without having to worry about what to put inside 
+ 	<head></head> elements. 
+ 
+ */
  
  class MetaData{
 	protected $conn;
 	private $errors = [];
 	public  $PageMetaData;
 	public $SiteName = ' | Mysite.com';
-
 
      function __construct($conn){
          $this->conn = $conn;
@@ -27,11 +32,6 @@
 			'category.php', 
 			'search.php', 
 			'page.php?q=about', 
-			'page.php?q=register', 
-			'page.php?q=contact', 
-			'page.php?q=login',
-			'page.php?q=LoggedIn',
-			'page.php?q=logout',
 		 ];	
 		 // And their, costume title
         	 $Static_Page_Titles = [
@@ -39,12 +39,6 @@
 			'Category | Search Companies By Their Categories ',
 			'Search | Find The Business You Are Looking For ',
 			'About | About Mysite.com & More.. ',
-			'Register | Register Your Bussiness Fast & Free, Today! ',
-			'Contact | Any Questions?, Contact Mysite.com Today ',
-			'Login | Update Your Business Infromation, Read Your Messages & More',
-			'Mysite.com - An US Business Listing Directory',
-			'Mysite.com - An US Business Listing Directory',
-			'Mysite.com - An US Business Listing Directory',
       		  ];
 		// One tag, for the all above static pages
 		$Static_Page_Keywords = [
