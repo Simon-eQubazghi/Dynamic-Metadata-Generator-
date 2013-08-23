@@ -47,8 +47,8 @@
 		$Static_Page_Content = [
 			'content'=>'This is where your "content" of your site goes'];
 			
-         $Attach = [$Allowed_Static_Pages, $Static_Page_Titles, $Static_Page_Keywords, $Static_Page_Content];
-         return $Attach;
+         return = [$Allowed_Static_Pages, $Static_Page_Titles, $Static_Page_Keywords, $Static_Page_Content];
+          
      }
 	 
 	 
